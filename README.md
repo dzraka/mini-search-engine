@@ -50,7 +50,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Buka browser dan akses: `http://localhost:5000`
+Buka browser dan akses: http://localhost:5000
 
 ## Project Structure
 
