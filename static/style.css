@@ -1,0 +1,287 @@
+:root {
+  --border: 3px solid #000;
+  --shadow-sm: 3px 3px 0 0 #000;
+  --shadow: 5px 5px 0 0 #000;
+  --shadow-lg: 8px 8px 0 0 #000;
+  --radius: 0;
+  --bg: #fffdf5;
+  --yellow: #ffd23f;
+  --pink: #ff6b6b;
+  --blue: #74b9ff;
+  --text: #111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin: 0 auto 50px auto;
+  max-width: 1100px;
+}
+
+.app-name {
+  flex-shrink: 0;
+}
+
+.app-name h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1rem, 5vw, 2rem);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  display: inline-block;
+  width: fit-content;
+  background: var(--pink);
+  padding: 14px 22px;
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+}
+
+#search-id {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.75rem 1rem;
+  border: var(--border);
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow 0.15s,
+    transform 0.15s;
+}
+
+#search-id:focus {
+  outline-offset: 2px;
+  box-shadow: var(--shadow);
+  transform: translate(-1px, -1px);
+}
+
+#search-btn {
+  border: var(--border);
+  border-radius: 0;
+  background: var(--yellow);
+  box-shadow: var(--shadow);
+  font-weight: 700;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+#search-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-lg);
+}
+
+#search-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+#search-btn:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px;
+  margin-bottom: 25px;
+  background: #fff;
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+.container:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow);
+}
+
+.content {
+  flex: 1;
+}
+
+.content p {
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 500px;
+}
+
+.info {
+  min-width: 90px;
+  text-align: center;
+  padding: 10px 14px;
+  background-color: var(--blue);
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  #search-id {
+    max-width: 100%;
+  }
+
+  .pagination span {
+    min-width: 140px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .app-name {
+    text-align: start;
+  }
+
+  .app-name h1 {
+    font-size: 1.1rem;
+    padding: 10px 16px;
+    letter-spacing: -1px;
+  }
+
+  .search-box {
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  #search-id {
+    flex: 1;
+    min-width: 0;
+    padding: 0.65rem 0.8rem;
+    font-size: 14px;
+  }
+
+  #search-btn {
+    padding: 8px 14px;
+    flex-shrink: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .info {
+    align-self: flex-start;
+    min-width: unset;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .pagination span {
+    min-width: 100%;
+    order: -1;
+  }
+
+  .pagination button {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+/* Pagination Styles */
+#result-info {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff;
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.pagination button {
+  border: var(--border);
+  background: var(--blue);
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.pagination button:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow);
+  background: #5ba3e8;
+}
+
+.pagination button:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #ccc;
+}
+
+.pagination span {
+  font-weight: 600;
+  min-width: 200px;
+  text-align: center;
+  font-size: 14px;
+}

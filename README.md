@@ -1,0 +1,75 @@
+# Mini Search Engine - Vaksin Campak
+
+Aplikasi search engine mini menggunakan TF-IDF untuk mencari dokumen berdasarkan query dari dataset vaksin campak.
+
+## Prerequisites
+
+- Python 3.8+
+- pip (Python package manager)
+
+## Installation
+
+### 1. Clone Repository
+
+```
+git clone https://github.com/dzraka/mini-search-engine.git
+cd mini-search-engine
+```
+
+### 2. Create Virtual Environment
+
+```
+python -m venv venv
+```
+
+### 3. Activate Virtual Environment
+
+**CMD:**
+
+```
+venv\Scripts\activate
+```
+
+**Git Bash:**
+
+```
+source venv/Scripts/activate
+# or
+. venv/Scripts/activate
+```
+
+### 4. Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+## Run the Application
+
+```
+python app.py
+```
+
+Buka browser dan akses: `http://localhost:5000`
+
+## Project Structure
+
+```
+.
+├── app.py                 # Flask main application
+├── search_engine.py       # TF-IDF search implementation
+├── vaksin_campak.csv      # Dataset komentar vaksin campak
+├── requirements.txt       # Python dependencies
+├── README.md              # Project documentation
+├── static/
+│   ├── style.css          # CSS styling
+│   └── script.js          # JavaScript frontend
+└── templates/
+    └── index.html         # HTML template
+```
+
+## Dependencies
+
+- **Flask** - Web framework
+- **Pandas** - Data processing
+- **Sastrawi** - Indonesian text processing (stemming & stopwords)
