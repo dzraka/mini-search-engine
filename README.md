@@ -11,14 +11,14 @@ Aplikasi search engine mini menggunakan TF-IDF untuk mencari dokumen berdasarkan
 
 ### 1. Clone Repository
 
-```
+```bash
 git clone https://github.com/dzraka/mini-search-engine.git
 cd mini-search-engine
 ```
 
 ### 2. Create Virtual Environment
 
-```
+```bash
 python -m venv venv
 ```
 
@@ -26,13 +26,13 @@ python -m venv venv
 
 **CMD:**
 
-```
+```bash
 venv\Scripts\activate
 ```
 
 **Git Bash:**
 
-```
+```bash
 source venv/Scripts/activate
 # or
 . venv/Scripts/activate
@@ -40,13 +40,13 @@ source venv/Scripts/activate
 
 ### 4. Install Dependencies
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
 ## Run the Application
 
-```
+```bash
 python app.py
 ```
 
@@ -54,7 +54,7 @@ Buka browser dan akses: `http://localhost:5000`
 
 ## Project Structure
 
-```
+```bash
 .
 ├── app.py                 # Flask main application
 ├── search_engine.py       # TF-IDF search implementation
