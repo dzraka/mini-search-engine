@@ -56,20 +56,27 @@ Buka browser dan akses: http://localhost:5000
 
 ```bash
 .
-├── app.py                 # Flask main application
-├── search_engine.py       # TF-IDF search implementation
-├── vaksin_campak.csv      # Dataset komentar vaksin campak
-├── requirements.txt       # Python dependencies
-├── README.md              # Project documentation
+├── app.py                      # Flask main application
+├── search_engine.py            # TF-IDF search implementation
+├── vaksin_campak.csv           # Dataset komentar vaksin campak
+├── requirements.txt            # Python dependencies
+├── .gitignore                  # Git ignore rules
+├── README.md                   # Project documentation
+├── notebook/
+│   └── vaksin_campak.ipynb     # Jupyter notebook
 ├── static/
-│   ├── style.css          # CSS styling
-│   └── script.js          # JavaScript frontend
+│   ├── style.css               # CSS styling
+│   └── script.js               # JavaScript frontend
 └── templates/
-    └── index.html         # HTML template
+    └── index.html              # HTML template
 ```
 
 ## Dependencies
 
-- **Flask** - Web framework
-- **Pandas** - Data processing
-- **Sastrawi** - Indonesian text processing (stemming & stopwords)
+- **Flask** (3.1.3) - Web framework
+- **Pandas** (3.0.3) - Data processing dan manipulation
+- **NumPy** (2.4.6) - Numerical computations
+- **Sastrawi** (1.0.1) - Indonesian text processing (stemming & stopwords)
+- **Python 3.8+**
+
+Lihat `requirements.txt` untuk versi lengkap semua dependencies.
